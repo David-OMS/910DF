@@ -1,4 +1,4 @@
-# 910DF — Public Site Information Architecture (locked)
+# 910DF: Public Site Information Architecture (locked)
 
 Source: NGO Business & Operational Blueprint. This file is the public site map only. Internal ops (CAC, SCUML, risk SOPs, procurement checklists, dual-sign-off policy, full fundraising calendar) stay off the site.
 
@@ -8,15 +8,15 @@ Accent / colour / type are locked in `docs/design-system.md`. Logo mark and real
 
 ## Site purpose
 
-Public face of The Nine-Ten Development Foundation (910DF): make mission, geography, WHEE model, six programs, and paths to donate / volunteer / partner clear and credible. Tone matches a serious development NGO — not a pasted operations manual and not invented impact theatre.
+Public face of The Nine-Ten Development Foundation (910DF): make mission, geography, WHEE model, six programs, and paths to donate / volunteer / partner clear and credible. Tone matches a serious development NGO, not a pasted operations manual and not invented impact theatre.
 
 ## Org thesis (from blueprint)
 
 - **Name:** The Nine-Ten Development Foundation (910DF)
 - **Where:** Abuja, Kaduna, Nasarawa, Niger (Nigeria)
-- **Model:** Integrated WHEE — Water, Hygiene, Energy, Education
+- **Model:** Integrated WHEE, Water, Hygiene, Energy, Education
 - **Who served:** Women, children under five, primary school pupils, secondary school girls
-- **Problem:** Multi-dimensional rural poverty — water scarcity, lack of electricity, under-5 under-nutrition, school dropout (especially girls / period poverty), under-resourced primary schools
+- **Problem:** Multi-dimensional rural poverty, water scarcity, lack of electricity, under-5 under-nutrition, school dropout (especially girls / period poverty), under-resourced primary schools
 - **Long-term aim:** Healthier, more resilient communities; gender-equitable education; stronger local economic opportunity
 
 ## Stage on the site
@@ -24,14 +24,14 @@ Public face of The Nine-Ten Development Foundation (910DF): make mission, geogra
 Do **not** lead with “just founded” or apologise for being new. Honesty means:
 
 - No fake “children served” counters, donation thermometers, or invented case studies
-- Impact presents the measurement framework and what will be reported — not trophy stats
+- Impact presents the measurement framework and what will be reported, not trophy stats
 - Get Involved can speak to seed support, volunteers, and CSR without a vulnerability banner
 
 A single calm line in About is enough if stage needs wording at all. The blueprint’s early stage shapes what we *omit* and *refuse to invent*, not the hero headline.
 
 ## Pilot (for later copy if needed; not a homepage apology)
 
-Blueprint first public pilot: low-cost, high-visibility — sanitary pad distribution and a mini-library in one primary school. Use when building real Field Notebook / pilot content; not required as a permanent “we’re small” notice.
+Blueprint first public pilot: low-cost, high-visibility, sanitary pad distribution and a mini-library in one primary school. Use when building real Field Notebook / pilot content; not required as a permanent “we’re small” notice.
 
 ## Year-1 giving frame (from blueprint)
 
@@ -48,7 +48,7 @@ Public/individual donations go 100% to programs in Year 1; founder/board contrib
 | Hero | Brand-forward headline; one supporting line (mission + geography + WHEE); primary CTAs: Donate, Volunteer |
 | Action strip | Donate · Volunteer · Partner (no vanity impact numbers) |
 | Problem | Short, specific problem from the blueprint |
-| Approach | WHEE in plain language — integrated, not siloed handouts |
+| Approach | WHEE in plain language, integrated, not siloed handouts |
 | Programs preview | Six pillars → link to Programs |
 | Where we work | Abuja, Kaduna, Nasarawa, Niger |
 | Get involved teaser | Give / volunteer / partner |
@@ -64,18 +64,18 @@ Public/individual donations go 100% to programs in Year 1; founder/board contrib
 | Community-first delivery (leaders, local ownership) | Security SOP |
 | Optional one calm stage line | Internal 90-day task checklist as a page |
 
-No fabricated founding anecdote — document has none. About uses mission / ToC, not fiction.
+No fabricated founding anecdote, document has none. About uses mission / ToC, not fiction.
 
 ### 3. Programs
 
 One page, six modules (same shape each: who · what · why it sits in WHEE):
 
-1. Clean water & sanitation — solar-powered boreholes; community WASH committees
-2. Clean energy — 1.5–3kVA solar BESS at hubs, health points, household clusters
-3. Primary school support — mini-libraries, curriculum books, low-bandwidth solar-powered internet
-4. Tuition sponsorship — up to 50 pupils/year; merit selection with teachers and community elders
-5. Menstrual hygiene — Dignity Spaces; quarterly pads; menstrual health education
-6. Nutrition — PHC screening (MUAC); therapeutic/fortified foods for malnourished under-5s
+1. Clean water & sanitation, solar-powered boreholes; community WASH committees
+2. Clean energy, 1.5-3kVA solar BESS at hubs, health points, household clusters
+3. Primary school support, mini-libraries, curriculum books, low-bandwidth solar-powered internet
+4. Tuition sponsorship, up to 50 pupils/year; merit selection with teachers and community elders
+5. Menstrual hygiene, Dignity Spaces; quarterly pads; menstrual health education
+6. Nutrition, PHC screening (MUAC); therapeutic/fortified foods for malnourished under-5s
 
 Optional short “How we work” strip: community entry → procurement → capacity building → monitoring & handover. Not a full PMO manual.
 
@@ -90,11 +90,11 @@ Optional short “How we work” strip: community entry → procurement → capa
 - **Donate:** seed / Sponsor a Scholar direction; Year-1 100% model; Field Notebook transparency; CSR-shaped pillar sponsorship language
 - **Volunteer:** local corps in operating states; what volunteers actually support; child protection / conduct mentioned lightly
 - **Partner:** corporate ESG alignment; institutional funding after verified pilot (discipline, not weakness)
-- Payment rails: honest “how to give” until Paystack/Flutterwave (or equivalent) is live — no fake checkout
+- Payment rails: honest “how to give” until Paystack/Flutterwave (or equivalent) is live, no fake checkout
 
 ### 6. Contact
 
-Inquiry paths: donate · volunteer · partnership · general. Geography. Real phone / email / address only when supplied — omit or clearly mark placeholders; never invent.
+Inquiry paths: donate · volunteer · partnership · general. Geography. Real phone / email / address only when supplied, omit or clearly mark placeholders; never invent.
 
 ---
 

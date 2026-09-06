@@ -13,7 +13,7 @@
   --line: #e6e6e6;
   --surface: #f7f7f5;
   --overlay: rgba(0, 0, 0, 0.45);
-  /* Top heavy for nav, bottom heavy for headline — flat overlay was too weak on busy photos */
+  /* Top heavy for nav, bottom heavy for headline, flat overlay was too weak on busy photos */
   --hero-scrim: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.78) 0%,
@@ -126,7 +126,7 @@
     --motion-delay: 1100ms;
   }
 
-/* Soft paper grain + faint wash — readable as atmosphere, not a pattern shout */
+/* Soft paper grain + faint wash, readable as atmosphere, not a pattern shout */
   .section-backdrop-subtle {
     position: relative;
     isolation: isolate;
@@ -170,7 +170,7 @@
   }
 }
 
-/* Per-element scroll reveal — each line fires when it enters the viewport */
+/* Per-element scroll reveal, each line fires when it enters the viewport */
 .scroll-reveal {
   opacity: 0;
   transform: translateY(1.5rem);
@@ -179,9 +179,19 @@
     transform 0.75s var(--motion-ease);
 }
 
-.scroll-reveal.is-revealed {
+  .scroll-reveal.is-revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Fixed rem cut so mobile stacked height does not deepen the crop into Donate */
+.action-strip-diagonal {
+  clip-path: polygon(0 1.75rem, 100% 0, 100% 100%, 0 100%);
+}
+
+.action-strip-arc {
+  border-top-left-radius: 50% 28%;
+  border-top-right-radius: 50% 28%;
 }
 
 @keyframes hero-media-in {

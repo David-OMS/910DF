@@ -10,17 +10,17 @@ export const homeActionStrip = {
     {
       label: "Donate",
       href: "/get-involved",
-      blurb: "Support programmes that reach women and children in rural communities.",
+      blurb: "Fund programmes for women and children in rural communities.",
     },
     {
       label: "Volunteer",
       href: "/get-involved",
-      blurb: "Join local field work across our four states of operation.",
+      blurb: "Support field work in Abuja, Kaduna, Nasarawa, and Niger States.",
     },
     {
       label: "Partner",
       href: "/get-involved",
-      blurb: "Companies and institutions looking for a clear, accountable fit.",
+      blurb: "Corporate and institutional partnerships linked to specific programmes.",
     },
   ],
 };
@@ -34,49 +34,104 @@ export type ProgrammeCard = {
   id: string;
   name: string;
   body: string;
-  /** Set when the file exists under public/images/programs/ — leave null for placeholder */
+  /** Set when the file exists under public/images/programs/; leave null for placeholder */
   imageSrc: string | null;
   imageAlt: string;
 };
 
 /**
- * Situation copy stays close to the blueprint problem statement.
- * Workstreams map 1:1 to the six programmes in the doc.
- *
- * Drop images into public/images/programs/ using the filenames below,
- * then set imageSrc from null to that path.
+ * Problem prose only. Response sits in the programme cards below.
  */
 export const homeSituation = {
   paragraphs: [
     [
       {
-        text: "Rural communities in Northern and North-Central Nigeria — including ",
+        text: "In rural communities across Northern and North-Central Nigeria, including ",
       },
       {
-        text: "Abuja, Kaduna, Nasarawa, and Niger",
+        text: "Abuja, Kaduna, Nasarawa, and Niger States",
         isEmphasized: true,
       },
       {
-        text: " — face multi-dimensional poverty that hits ",
+        text: ", households face ",
+      },
+      {
+        text: "multi-dimensional poverty",
+        isEmphasized: true,
+      },
+      {
+        text: ": limited water access, little or no reliable electricity, under-resourced schools, and fragile nutrition. The effects fall hardest on ",
       },
       {
         text: "women, children under five, primary school pupils, and secondary school girls",
         isEmphasized: true,
       },
-      { text: " hardest." },
+      { text: "." },
     ],
     [
       {
-        text: "Chronic water scarcity, lack of electricity, severe under-nutrition among under-5s, high school-dropout rates — especially for girls due to period poverty — and under-resourced public primary schools",
+        text: "Chronic water scarcity",
         isEmphasized: true,
       },
       {
-        text: " keep families stuck in the same cycle.",
+        text: " forces long trips to distant or unsafe sources. Women and girls usually carry that work, losing hours for school, paid work, or rest. Unsafe water also raises the risk of ",
+      },
+      {
+        text: "waterborne illness",
+        isEmphasized: true,
+      },
+      {
+        text: ", which local clinics continue to treat.",
       },
     ],
     [
       {
-        text: "910DF responds with an integrated approach: clean water, nutrition, menstrual hygiene, sustainable energy, and foundational education support — delivered together, not as separate one-off drop-offs.",
+        text: "Many of the same communities lack electricity",
+        isEmphasized: true,
+      },
+      {
+        text: ". Clinics and community hubs lose capacity after dark. Children have little reliable light for evening study. Where fuel is used at all, households often depend on ",
+      },
+      {
+        text: "kerosene or diesel",
+        isEmphasized: true,
+      },
+      { text: "." },
+    ],
+    [
+      {
+        text: "Among young children, ",
+      },
+      {
+        text: "severe under-nutrition among under-fives",
+        isEmphasized: true,
+      },
+      {
+        text: " remains a serious risk. Scarce or undiversified food affects growth and energy, and families often have limited access to early screening and support at primary health centres.",
+      },
+    ],
+    [
+      {
+        text: "Public primary schools are often ",
+      },
+      {
+        text: "under-resourced",
+        isEmphasized: true,
+      },
+      {
+        text: ", with limited books, weak learning spaces, and little digital access. At secondary level, ",
+      },
+      {
+        text: "period poverty",
+        isEmphasized: true,
+      },
+      {
+        text: " contributes to absenteeism and dropout when girls lack sanitary materials, private facilities, or basic menstrual health information.",
+      },
+    ],
+    [
+      {
+        text: "These conditions reinforce one another. Time spent fetching water, lack of light after dark, under-nutrition in under-fives, and interrupted schooling compound household hardship.",
       },
     ],
   ] as TextPart[][],
@@ -93,7 +148,7 @@ export const homeSituation = {
       {
         id: "energy",
         name: "Clean energy",
-        body: "1.5–3 kVA solar BESS for community hubs, health centres, and rural household clusters.",
+        body: "1.5-3 kVA solar BESS for community hubs, health centres, and rural household clusters.",
         imageSrc: "/images/programs/energy.jpg",
         imageAlt: "Workers installing solar panels on a rooftop",
       },

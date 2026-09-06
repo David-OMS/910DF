@@ -20,7 +20,7 @@ export const ACCENT_PRESETS: AccentPreset[] = [
   {
     id: "sahel-gold",
     label: "Sahel gold",
-    description: "Default — warm Sahel sun, distinct from Welfare orange.",
+    description: "Default, warm Sahel sun, distinct from Welfare orange.",
     colors: {
       accent: "#C9962A",
       accentDark: "#A67B1F",
@@ -42,7 +42,7 @@ export const ACCENT_PRESETS: AccentPreset[] = [
   {
     id: "deep-teal",
     label: "Deep teal",
-    description: "Cooler trust tone — water / resilience lean.",
+    description: "Cooler trust tone, water / resilience lean.",
     colors: {
       accent: "#0F766E",
       accentDark: "#0B5A54",
@@ -53,7 +53,7 @@ export const ACCENT_PRESETS: AccentPreset[] = [
   {
     id: "forest",
     label: "Forest",
-    description: "Growth / land — use if gold feels too warm.",
+    description: "Growth / land, use if gold feels too warm.",
     colors: {
       accent: "#3F6F4A",
       accentDark: "#2F5438",
@@ -64,7 +64,7 @@ export const ACCENT_PRESETS: AccentPreset[] = [
   {
     id: "clay",
     label: "Clay",
-    description: "Earth red — strong on B&W photos, not purple.",
+    description: "Earth red, strong on B&W photos, not purple.",
     colors: {
       accent: "#B4533A",
       accentDark: "#8F3F2C",
@@ -148,7 +148,11 @@ function darken(hex: string, amount: number): string {
     return hex;
   }
 
-  return rgbToHex(rgb.r * (1 - amount), rgb.g * (1 - amount), rgb.b * (1 - amount));
+  return rgbToHex(
+    rgb.r * (1 - amount),
+    rgb.g * (1 - amount),
+    rgb.b * (1 - amount),
+  );
 }
 
 /**

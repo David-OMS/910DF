@@ -1,4 +1,4 @@
-# 910DF — Build pattern (locked)
+# 910DF: Build pattern (locked)
 
 How we build and document the site. Follow this for every slice. Cursor also mirrors the hard rules in `.cursorrules`.
 
@@ -23,7 +23,7 @@ Do not skip ahead and build three sections “while we’re here.” Do not star
 | 0 | **Shell** | Next.js + Tailwind + fonts + CSS accent variables + accent preview route wired enough to work |
 | 1 | Navbar | |
 | 2 | Hero | |
-| 3 | Action strip | Bridge band under hero — Donate / Volunteer / Partner (not Welfare candy bars; no repeat of hero geography) |
+| 3 | Action strip | Bridge band under hero, Donate / Volunteer / Partner (not Welfare candy bars; no repeat of hero geography) |
 | 4 | Situation + work | WFP-style: factual situation prose, then “What Nine-Ten is doing” workstreams |
 | 5 | Programs preview | |
 | 6 | Where we work | |
@@ -33,13 +33,13 @@ Do not skip ahead and build three sections “while we’re here.” Do not star
 
 Shell (0) is mandatory first: without tokens + preview plumbing, later blocks fight the foundation.
 
-Each block = component(s) under `components/layout` or `components/sections`, composed by a route — not markup dumped in `page.tsx`.
+Each block = component(s) under `components/layout` or `components/sections`, composed by a route, not markup dumped in `page.tsx`.
 
 ---
 
 ## No hardcoding things that can change
 
-Design and brand values that might change later (accents, related colours, type choices, spacing/radius scales, site copy) belong in tokens, theme config, or `src/content/` — not hardcoded in components. That is why accents are CSS variables: the preview picker and a later client colour lock should not require hunting hex through the tree. Inline one-off styling for changeable visuals is the same problem in another coat.
+Design and brand values that might change later (accents, related colours, type choices, spacing/radius scales, site copy) belong in tokens, theme config, or `src/content/`, not hardcoded in components. That is why accents are CSS variables: the preview picker and a later client colour lock should not require hunting hex through the tree. Inline one-off styling for changeable visuals is the same problem in another coat.
 
 ---
 
@@ -60,13 +60,13 @@ Runtime CSS custom properties on `:root` / `html` use short names `--accent`, `-
 Pick one primary approach and implement it in the **shell** slice (can refine later, but must exist from the start):
 
 - **Preferred:** a **separate private route** (e.g. `/preview/accents`, `/preview/images`, `/preview/brand`) that is **not linked** from public nav/footer. Unless someone has the URL (or you deploy it), visitors don’t stumble on it.
-- Optional extra: same controls available only in local/dev — still keep the route so demos are easy.
+- Optional extra: same controls available only in local/dev, still keep the route so demos are easy.
 
 The preview must let you:
 
 - Switch among a **curated list** of accent presets (gold, orange, teal, etc.)
 - Optionally pick a **custom** accent and derive dark/soft companions (document the derivation in code comments if non-obvious)
-- See real UI chrome updating live (at least sample buttons, links, and a mini action-strip — and once Navbar/Hero exist, those blocks should respond too because they use the same variables)
+- See real UI chrome updating live (at least sample buttons, links, and a mini action-strip, and once Navbar/Hero exist, those blocks should respond too because they use the same variables)
 
 When the client picks a final accent: update `docs/design-system.md`, set the production default variables, note the decision in the block log. Keep the preview route for future tweaks; still no public nav link.
 
@@ -83,7 +83,7 @@ After a block is accepted (or at end of the slice if still iterating), update do
 | `docs/build-log.md` | Chronological log: date, block name, what shipped, decisions, open questions |
 | `docs/design-system.md` | Visual tokens; update when accent/type/layout rules change |
 | `docs/site-ia.md` | Only if IA/sections change |
-| Code comments | Local why/constraints only — plain English |
+| Code comments | Local why/constraints only, plain English |
 
 ### Each build-log entry should include
 
@@ -95,7 +95,7 @@ After a block is accepted (or at end of the slice if still iterating), update do
 
 Create `docs/build-log.md` on the first shell slice; append from there.
 
-Personal pricing/scope notes stay in `for_me/` — not mixed into the build log unless useful.
+Personal pricing/scope notes stay in `for_me/`, not mixed into the build log unless useful.
 
 ---
 

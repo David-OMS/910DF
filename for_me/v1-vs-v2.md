@@ -1,4 +1,4 @@
-# 910DF — What’s in v1 vs later (for you)
+# 910DF: What’s in v1 vs later (for you)
 
 Personal scope sheet so you can price, promise, and protect your time. Public IA still lives in `docs/site-ia.md`. This folder is for you, not the client site.
 
@@ -13,13 +13,13 @@ Personal scope sheet so you can price, promise, and protect your time. Public IA
 
 ---
 
-## v1 — build this (quoted friends-rate scope)
+## v1, build this (quoted friends-rate scope)
 
 ### Pages
 - Home
 - About
 - Programs (all six pillars)
-- Impact (what we track + how we report — **no fake numbers**)
+- Impact (what we track + how we report, **no fake numbers**)
 - Get involved (Donate / Volunteer / Partner)
 - Contact
 
@@ -27,10 +27,10 @@ Personal scope sheet so you can price, promise, and protect your time. Public IA
 - Responsive, accessible, fast enough
 - Content in typed files (`src/content/`) so copy changes don’t mean rewriting components
 - Tailwind + reusable components (Button, layout, sections)
-- Donate path honest: how to give / pledge form — **not** live card checkout unless banking is ready and they ask
+- Donate path honest: how to give / pledge form, **not** live card checkout unless banking is ready and they ask
 - Volunteer + partnership inquiry paths
 - Year-1 “100% to programs” line (from blueprint) unless they veto
-- Welfare-inspired layout language (B&W hero, accent later) — logo/accent/contact **placeholders or deferred**, not blocking structure
+- Welfare-inspired layout language (B&W hero, accent later), logo/accent/contact **placeholders or deferred**, not blocking structure
 
 ### Impact in v1 (important)
 - KPI list per pillar (from blueprint)
@@ -59,7 +59,7 @@ Personal scope sheet so you can price, promise, and protect your time. Public IA
 
 ---
 
-## v1.5 — small add-ons (separate mini-quotes)
+## v1.5, small add-ons (separate mini-quotes)
 
 Do these only when they ask and/or when reality unblocks them.
 
@@ -74,7 +74,7 @@ Do these only when they ask and/or when reality unblocks them.
 
 ---
 
-## v2 — phase 2 (new conversation, new money)
+## v2, phase 2 (new conversation, new money)
 
 Blueprint dreams that need **real ops + data**, not just more React.
 
@@ -83,9 +83,9 @@ Their plan: quarterly impact dashboards with simple visual graphs **on the websi
 
 | Level | What it is | Effort |
 |---|---|---|
-| **A — Manual dashboards** | You update charts each quarter from a spreadsheet they send | Low–mid |
-| **B — Semi-auto** | Spreadsheet / Airtable / Google Sheet → site reads it | Mid |
-| **C — Live M&E** | Kobo/ODK → database → authenticated pipeline → live charts | High — real product |
+| **A, Manual dashboards** | You update charts each quarter from a spreadsheet they send | Low-mid |
+| **B, Semi-auto** | Spreadsheet / Airtable / Google Sheet → site reads it | Mid |
+| **C, Live M&E** | Kobo/ODK → database → authenticated pipeline → live charts | High, real product |
 
 **Recommendation:** promise **A** (or B) in phase 2 once pilot data exists. Do **not** sell C in the same breath as v1 unless they have budget and a data person.
 
@@ -107,7 +107,7 @@ Empty blog on day one = skip
 - Only with real assets and a reason to maintain them
 
 ### i18n
-- English + Hausa (or others) — only if they will actually maintain translations
+- English + Hausa (or others), only if they will actually maintain translations
 
 ### Heavier trust / product stuff
 - Donor accounts
@@ -139,10 +139,10 @@ Empty blog on day one = skip
 
 ---
 
-## Pricing reminder (for you — not a client invoice)
+## Pricing reminder (for you, not a client invoice)
 
-Cold mid-freelancer band for this v1 shape: often ~₦700k–₦1.2M.  
-Friends rate you were circling: ~₦550k–₦600k for **v1 only**.  
+Cold mid-freelancer band for this v1 shape: often ~₦700k-₦1.2M.  
+Friends rate you were circling: ~₦550k-₦600k for **v1 only**.  
 v1.5/v2 = new quotes. Graphs and Paystack are how scope creeps if you don’t name the split.
 
 ---
@@ -160,4 +160,4 @@ v1.5/v2 = new quotes. Graphs and Paystack are how scope creeps if you don’t na
 
 When they ask “can the site show live impact graphs?” answer:
 
-> Yes — your plan calls for quarterly dashboards on the site. v1 ships the Impact page and a place for charts. Once the pilot gives us numbers, we add the graphs (manual or connected). Full live survey→website feed is phase 2.
+> Yes, your plan calls for quarterly dashboards on the site. v1 ships the Impact page and a place for charts. Once the pilot gives us numbers, we add the graphs (manual or connected). Full live survey→website feed is phase 2.

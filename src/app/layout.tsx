@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Figtree, Newsreader } from "next/font/google";
 
+import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { AccentProvider } from "@/components/providers/AccentProvider";
+import { ActionStripProvider } from "@/components/providers/ActionStripProvider";
 import { HeroProvider } from "@/components/providers/HeroProvider";
 import "@/styles/globals.css";
 
@@ -24,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | 910DF",
   },
   description:
-    "The Nine-Ten Development Foundation — integrated Water, Hygiene, Energy, and Education programmes across Abuja, Kaduna, Nasarawa, and Niger.",
+    "The Nine-Ten Development Foundation: integrated Water, Hygiene, Energy, and Education programmes across Abuja, Kaduna, Nasarawa, and Niger.",
 };
 
 export default function RootLayout({
@@ -37,11 +39,14 @@ export default function RootLayout({
       lang="en"
       className={`${figtree.variable} ${newsreader.variable} h-full antialiased`}
     >
-      <body className="min-h-full font-sans text-ink">
+      <body className="flex min-h-full flex-col font-sans text-ink">
         <AccentProvider>
           <HeroProvider>
-            <SiteHeader />
-            {children}
+            <ActionStripProvider>
+              <SiteHeader />
+              <div className="flex-1">{children}</div>
+              <SiteFooter />
+            </ActionStripProvider>
           </HeroProvider>
         </AccentProvider>
       </body>

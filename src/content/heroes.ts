@@ -16,7 +16,7 @@ export const HERO_IMAGES: HeroImage[] = [
   {
     id: "classroom",
     label: "Classroom focus",
-    description: "Working hero — education lane, single subject, landscape.",
+    description: "Working hero, education lane, single subject, landscape.",
     src: "/images/heroes/hero-classroom.jpg",
     width: 4608,
     height: 3070,
@@ -26,7 +26,7 @@ export const HERO_IMAGES: HeroImage[] = [
   {
     id: "green-shirt",
     label: "Green shirt portrait",
-    description: "Backup — younger child, warmer smile, tighter crop.",
+    description: "Backup, younger child, warmer smile, tighter crop.",
     src: "/images/heroes/hero-green-shirt.jpg",
     width: 3446,
     height: 3168,

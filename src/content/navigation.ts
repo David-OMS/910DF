@@ -17,3 +17,17 @@ export const mainNav: NavItem[] = [
   { href: "/get-involved", label: "Get involved", isCta: true },
   { href: "/contact", label: "Contact" },
 ];
+
+export const footerContent = {
+  blurb:
+    "Working with rural communities in Abuja, Kaduna, Nasarawa, and Niger States for water, energy, education, and nutrition for women and children.",
+  statesLabel: "Where we work",
+  states: ["Abuja", "Kaduna", "Nasarawa", "Niger"],
+  exploreLabel: "Explore",
+  involveLabel: "Get involved",
+  involveLinks: [
+    { href: "/get-involved", label: "Donate" },
+    { href: "/get-involved", label: "Volunteer" },
+    { href: "/get-involved", label: "Partner" },
+  ],
+};

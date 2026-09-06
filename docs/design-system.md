@@ -1,6 +1,6 @@
-# 910DF — Design system (locked)
+# 910DF: Design system (locked)
 
-Visual language for the public site. Inspired by [Welfare](https://themewagon.github.io/welfare/) (B&W photography + one accent) — **not** a clone, and **not** their orange.
+Visual language for the public site. Inspired by [Welfare](https://themewagon.github.io/welfare/) (B&W photography + one accent), **not** a clone, and **not** their orange.
 
 Logo mark still deferred. This file locks colour, type, and layout rules so build work stays consistent.
 
@@ -25,7 +25,7 @@ Tailwind colour names match the token (`bg-accent`, `text-accent-dark`, …) and
 
 Why this default: reads warm (sun, grain, Sahel light), works on black-and-white photos, sits apart from Welfare orange, and avoids purple / neon / generic “NGO blue.”
 
-**Components must use the CSS variables (via Tailwind theme), never hardcoded accent hex** — required so the preview picker and later client lock-in work without rewriting UI.
+**Components must use the CSS variables (via Tailwind theme), never hardcoded accent hex**, required so the preview picker and later client lock-in work without rewriting UI.
 
 **Rejected as the only system:** purple/indigo, cream+#terracotta broadsheet look. Orange/teal/etc. may exist as **preview presets**, not as competing hardcoded themes in components.
 
@@ -43,7 +43,7 @@ Why this default: reads warm (sun, grain, Sahel light), works on black-and-white
 | `surface` | `#F7F7F5` | Alternate section ground (cool near-white, **not** warm cream `#F4F1EA`) |
 | `overlay` | `rgba(0,0,0,0.45)` | Hero text legibility over photos |
 
-Photography: **greyscale via CSS** (`grayscale` utility / filter) on the colour original. Do not bake a separate B&W file as the only asset — the image lab needs the colour master so you can toggle. Default on the live hero is greyscale on.
+Photography: **greyscale via CSS** (`grayscale` utility / filter) on the colour original. Do not bake a separate B&W file as the only asset, the image lab needs the colour master so you can toggle. Default on the live hero is greyscale on.
 
 ---
 
@@ -53,7 +53,7 @@ Avoid default stacks (Inter, Roboto, Arial, system-only).
 
 | Role | Font | Notes |
 |---|---|---|
-| Display / emotional headlines | **Newsreader** (serif) | Hero and major section titles — Welfare-style serif hit without newspaper layout |
+| Display / emotional headlines | **Newsreader** (serif) | Hero and major section titles, Welfare-style serif hit without newspaper layout |
 | UI / body | **Figtree** (sans) | Nav, buttons, body, forms |
 
 Load via `next/font` (Google). Fallbacks: `Georgia, serif` / `system-ui, sans-serif` only as fallbacks, not the design.
@@ -70,9 +70,9 @@ Load via `next/font` (Google). Fallbacks: `Georgia, serif` / `system-ui, sans-se
 
 - Full-bleed B&W hero; transparent header over hero; brand left, nav right  
 - Active nav link = `accent`  
-- Overlapping **action strip** under hero: three panels using `accent` / `accent-soft` / `accent-dark` (or adjacent gold steps) — Donate / Volunteer / Partner (or Impact framing + those CTAs)  
+- Overlapping **action strip** under hero: three panels using `accent` / `accent-soft` / `accent-dark` (or adjacent gold steps), Donate / Volunteer / Partner (or Impact framing + those CTAs)  
 - White (or `surface`) content sections below; generous whitespace  
-- Cards for programs: image + title + short text — no dashboard chrome in the hero  
+- Cards for programs: image + title + short text, no dashboard chrome in the hero  
 - Ghost (outline) button on dark heroes; solid `accent` buttons on light sections; white buttons on accent panels  
 
 ### Motion (intentional, not noisy)
@@ -89,7 +89,7 @@ Load via `next/font` (Google). Fallbacks: `Georgia, serif` / `system-ui, sans-se
 ## Radius, space, elevation
 
 - Prefer slight radius on buttons/inputs (`rounded-sm` / `md`), not pill soup  
-- Shadows: minimal; one soft level max — don’t stack multi-layer glam shadows  
+- Shadows: minimal; one soft level max, don’t stack multi-layer glam shadows  
 - Spacing from a scale only (Tailwind theme), no magic `17px`
 
 ---
@@ -127,4 +127,4 @@ No raw accent hex in components once the theme exists. Preview route required fr
 
 ## Veto
 
-If the client insists on Welfare orange, swap only the accent tokens to an agreed orange hex — keep base B&W + type + layout rules. Don’t restyle the whole system ad hoc.
+If the client insists on Welfare orange, swap only the accent tokens to an agreed orange hex, keep base B&W + type + layout rules. Don’t restyle the whole system ad hoc.

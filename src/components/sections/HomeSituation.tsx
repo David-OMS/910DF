@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import {
@@ -59,7 +60,7 @@ export function HomeSituation() {
   return (
     <section className="section-backdrop-subtle" aria-label="Situation and work">
       <div className="section-site">
-        <div className="container-site max-w-3xl space-y-5 md:space-y-6">
+        <div className="container-site max-w-3xl space-y-6 md:space-y-7">
           {paragraphs.map((parts, index) => (
             <SituationParagraph key={index} parts={parts} />
           ))}
@@ -87,6 +88,12 @@ export function HomeSituation() {
                     <p className="mt-2 text-sm leading-relaxed text-muted md:text-base">
                       {item.body}
                     </p>
+                    <Link
+                      href={`/programs#${item.id}`}
+                      className="mt-auto pt-5 text-sm font-medium text-accent underline-offset-4 hover:underline"
+                    >
+                      Learn more
+                    </Link>
                   </div>
                 </article>
               </ScrollReveal>

@@ -25,7 +25,7 @@ export function BrandPreviewPanel() {
           Wordmark lab
         </h1>
         <p className="max-w-2xl text-muted">
-          Same type as the site. Not a finished logo — just how the name reads
+          Same type as the site. Not a finished logo, just how the name reads
           in the header slot on dark and light.
         </p>
       </header>
