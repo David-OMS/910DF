@@ -1,0 +1,196 @@
+# 910DF — Cursor project rules
+
+Follow these rules for every change. Do not expand scope, invent content, or “improve” beyond what was asked.
+
+Locked docs:
+- IA: `docs/site-ia.md`
+- Visual system: `docs/design-system.md` (default Sahel gold `#C9962A`, B&W base, Newsreader + Figtree)
+- Build pattern (Lego blocks, accent preview, per-block docs): `docs/build-pattern.md`
+
+Logo mark and real contact details remain deferred.
+
+Professional bar: serious development-NGO site (WHO-grade clarity and structure), not a trainee demo and not a dump of the internal blueprint.
+
+---
+
+## Collaboration
+
+- Propose, then wait for approval before implementing a slice. Do not build, add libraries, pages, or refactors without permission.
+- **Lego only:** one block per slice. After implementing, stop for inspect/finalise. Do not start the next block without permission. Do not batch “while we’re here” sections.
+- No drive-by changes, no unsolicited README fluff, no unsolicited refactors.
+- If a request conflicts with these rules or locked docs, stop and ask.
+- New patterns get written into `.cursorrules` or `docs/` before they become habit.
+- After each accepted block (or end of slice), update `docs/build-log.md` per `docs/build-pattern.md`.
+
+---
+
+## Stack (locked for build)
+
+- Next.js (App Router) + TypeScript (strict) + Tailwind CSS
+- Content as typed data in `src/content/` — components receive copy; they do not own org words
+- Absolute imports via `@/`
+
+### No hardcoding changeable values
+
+- Anything that might change (accents, brand colours, fonts, spacing scale, radii, breakpoints used as design decisions, copy, URLs that belong in content) lives in **tokens**, **theme config**, or **`src/content/`** — not sprinkled as magic values in components.
+- Especially accents: CSS variables only. Never `#C9962A` (or any accent hex) inside component classNames or styles.
+- Inline `style={}` / one-off hardcoded visual values are the same class of mistake as “just this once” hex: they break the accent preview and make later brand changes a rewrite. Prefer tokens.
+- Exception: truly one-off dynamic runtime values that tokens cannot express (e.g. live progress `%` via a CSS variable set from props). Document those.
+
+### Tailwind discipline
+
+- Theme tokens own colour, type, space, radius, shadow, z-index. No raw hex / random px in JSX for design decisions.
+- **Accent colours are CSS variables** on `:root` (`--accent`, `--accent-dark`, `--accent-soft`, `--accent-ink`). Tailwind maps `--color-accent*` → those vars. Components use classes like `bg-accent` / `text-accent` — never hardcoded accent hex.
+- Repeated UI is a named component (`Button`, `Card`, `PageHero`), not copy-pasted class strings.
+- `globals.css`: reset, body defaults, CSS variable defaults, and a few true layout utilities (`container`, `section`). `@apply` only there — do not rebuild CSS Modules inside Tailwind.
+- Arbitrary values (`mt-[17px]`, `text-[#…]`) banned except a documented exception (e.g. dynamic progress width via CSS variable).
+- Inline `style={}` only for values classes cannot express (dynamic CSS variables, dynamic %). Never for static colour, font, margin, flex, or grid.
+
+### Accent preview (required from shell onward)
+
+- Not optional. Ship accent CSS variables + a **private preview route** (e.g. `/preview/accents`) in the shell slice — not linked from public nav/footer.
+- Preview supports curated accent presets and custom accent picking, with live UI update via the CSS variables.
+- For developer / controlled client demos only — never a public site feature.
+- Full rules: `docs/build-pattern.md`.
+
+---
+
+## Folder structure
+
+```
+src/
+  app/                 # routes only — compose sections; almost no markup
+  components/
+    ui/                # primitives: Button, Field, Card — no 910DF copy
+    layout/            # Header, Footer, PageHero, Container
+    sections/          # domain blocks: ProgramsGrid, TheoryOfChange, DonateCta
+  content/             # typed source of truth: programs, nav, copy, kpis
+  styles/              # globals + any shared CSS that is not Tailwind utilities
+  lib/                 # pure helpers, no React — one concern per file
+  types/               # shared types
+public/
+  images/              # kebab-case, purpose in the name
+docs/                  # architecture, IA, decisions — kept current
+```
+
+- One component per file. File name = component name (`ProgramCard.tsx`).
+- No barrel `index.ts` re-exports until a folder has a stable public API.
+- Import direction only downward: `app` → `sections` → `layout` / `ui` → `lib` / `content`. Never reverse.
+- No dumping-ground `utils.ts`. Name helpers by job (`formatNaira.ts`).
+
+---
+
+## Size caps
+
+| Thing | Soft | Hard |
+|---|---|---|
+| React component | 120 lines | 180 |
+| Route `page.tsx` | 40 | 80 |
+| `lib/` function | 40 | 60 |
+| Props on one component | 8 | 12 |
+
+- Soft = prefer extract. Hard = extract or split before adding more — **unless** the file is one cohesive unit and splitting would leave meaningless glue. That file may go slightly over the hard cap; document why in a short comment or `docs/` note. If it is long because it does two jobs, split it.
+- Extract when: same markup appears twice; hard cap hit without a cohesion exception; JSX mixed with data shaping / business rules; you need a comment to explain what a block *is*.
+- Do not extract a one-off under the soft cap.
+- `page.tsx` only imports sections, passes content, sets metadata.
+
+---
+
+## Components
+
+Three layers:
+
+1. `ui/` — dumb; no org copy; no routes
+2. `layout/` — chrome and page shell
+3. `sections/` — 910DF domain blocks
+
+- Variants via props (`variant="primary" | "ghost"`), not `GoldButton.tsx`.
+- Composition over mega-props.
+- Forms are their own components.
+- No component both owns fetching and renders a full page.
+- Local state only at launch. No global store until three places share the same live state. No Context for convenience.
+
+---
+
+## Naming
+
+| Kind | Convention | Example |
+|---|---|---|
+| Component | PascalCase | `VolunteerForm.tsx` |
+| Content file | kebab-case | `programs.ts` |
+| Image | kebab-case + purpose | `hero-home-bw.webp` |
+| Route folder | kebab-case | `get-involved/` |
+| Token / theme key | role-based | `accent`, `space-4` |
+
+Names describe role, not paint. Boolean props: `isOpen`, `isDisabled`.
+
+---
+
+## Content and honesty
+
+- All public copy, programs, nav, KPIs live in `src/content/` as typed objects.
+- Follow `docs/site-ia.md`. Do not put ops-only blueprint material on public pages.
+- No invented impact numbers, donor names, events, blog posts, or “children served” vanity stats.
+- Unbuilt features (payment rails, live dashboards) are labelled honestly or omitted.
+- Placeholders for missing contact/bank details are clearly marked or omitted — never fabricated as real.
+- Do not lead the site with “just founded” apology copy. Stage shows through honest omissions and Impact/Get Involved framing (see IA).
+
+---
+
+## TypeScript
+
+- `strict` on. No `any`. No `as` to silence errors.
+- Shared types in `types/` or next to the content that owns them — no copy-paste interfaces.
+
+---
+
+## Accessibility
+
+- Semantic HTML: `header`, `nav`, `main`, `footer`, `section`; heading order intact.
+- Buttons for actions; links for navigation.
+- Visible focus rings; never `outline: none` without a replacement.
+- Labels, errors, and sensible `autocomplete` on forms.
+- Meaningful `alt` (or empty `alt` if decorative).
+- Accent-on-black and accent-on-white meet WCAG AA.
+
+---
+
+## Images and performance
+
+- Prefer WebP/AVIF; no multi‑MB hero dumps.
+- Explicit dimensions or aspect-ratio to avoid layout shift.
+- Priority only for true LCP (first-fold hero).
+- Grayscale approach: pick CSS filter **or** pre-processed assets and stick to one.
+
+---
+
+## Comments and documentation
+
+### Code comments
+
+- Voice: natural, plain English, as if the project owner left them for another developer — easy to follow, with the technical terms that matter.
+- Good: explain *why* or a non-obvious constraint, e.g. the width is set dynamically so the progress bar can show a live percentage, using a CSS variable because Tailwind cannot express that value from props.
+- Bad: AI chat voice, tutorials, “Let’s…”, restating the next line of code, or commented-out code left behind.
+- Prefer no comment over a useless one.
+
+### Docs (`docs/`)
+
+- Keep short, current docs so another developer can trace decisions and structure.
+- Locked: `site-ia.md`, `design-system.md`, `build-pattern.md`.
+- Per-block log: `docs/build-log.md` (create on first shell slice; append every block).
+- Add notes when a hard-cap exception is kept, when a Tailwind arbitrary-value exception is approved, or when architecture decisions change.
+- Do not generate long AI-flavoured markdown the user did not ask for.
+
+---
+
+## Git and secrets
+
+- Do not commit unless asked.
+- Never commit `.env` or secrets.
+- Do not update git config, force-push, or skip hooks unless explicitly asked.
+
+---
+
+## Out of scope until asked
+
+Storybook, Cypress, CMS, i18n, blog/gallery/events, live M&E graphs, payment provider wiring, final logo mark, real contact swap — unless the user requests that slice. Do not hardcode accents in components or remove the private preview route without updating `docs/build-pattern.md` / `docs/design-system.md` first.
