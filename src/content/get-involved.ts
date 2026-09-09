@@ -12,16 +12,23 @@ export type VolunteerTrack = {
   description: string;
 };
 
+export type GetInvolvedPathId = "donate" | "volunteer" | "partner";
+
+export type GetInvolvedPath = {
+  id: GetInvolvedPathId;
+  label: string;
+};
+
 export const getInvolvedPage = {
   eyebrow: "Get involved",
   title: "Support the work.",
   support:
     "Choose how you want to take part: donate, volunteer, or partner with 910DF.",
   paths: [
-    { href: "#donate", label: "Donate" },
-    { href: "#volunteer", label: "Volunteer" },
-    { href: "#partner", label: "Partner" },
-  ],
+    { id: "donate", label: "Donate" },
+    { id: "volunteer", label: "Volunteer" },
+    { id: "partner", label: "Partner" },
+  ] satisfies GetInvolvedPath[],
 };
 
 export const donateContent = {

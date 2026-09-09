@@ -22,7 +22,7 @@ export function VolunteerSection() {
   return (
     <section
       id={volunteerContent.id}
-      className="scroll-mt-24 border-b border-line md:scroll-mt-28"
+      className="border-b border-line"
       aria-labelledby="volunteer-heading"
     >
       <div className="section-site container-site">

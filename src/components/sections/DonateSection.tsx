@@ -25,7 +25,7 @@ export function DonateSection() {
   return (
     <section
       id={donateContent.id}
-      className="scroll-mt-24 border-b border-line md:scroll-mt-28"
+      className="border-b border-line"
       aria-labelledby="donate-heading"
     >
       <div className="section-site container-site">

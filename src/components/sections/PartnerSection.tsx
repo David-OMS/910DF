@@ -36,7 +36,7 @@ export function PartnerSection() {
   return (
     <section
       id={partnerContent.id}
-      className="scroll-mt-24 md:scroll-mt-28"
+      className="border-b border-line"
       aria-labelledby="partner-heading"
     >
       <div className="section-site container-site">

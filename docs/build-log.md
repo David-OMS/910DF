@@ -2,6 +2,18 @@
 
 ---
 
+## 2026-09-09: Get involved tabs
+
+**Status:** In review.
+
+### What landed
+
+- Donate / Volunteer / Partner are real tabs (one panel at a time), selected tab underlined in accent
+- `/get-involved#donate` (and volunteer/partner) from Home/footer still open the matching tab
+- Removed endless scroll of all three sections
+
+---
+
 ## 2026-09-09: Slice 8 — Contact
 
 **Status:** In review.
