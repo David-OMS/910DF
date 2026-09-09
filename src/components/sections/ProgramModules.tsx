@@ -79,7 +79,7 @@ function ProgrammeBlock({
           </div>
           <div className={imageFirst ? undefined : "md:order-1"}>
             <p className="text-xs font-medium uppercase tracking-[0.18em] text-accent">
-              {item.strand}
+              {item.letter}
             </p>
             <h2 className="mt-3 font-display text-3xl text-ink md:text-4xl">
               {item.name}

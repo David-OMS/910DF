@@ -2,12 +2,12 @@ export const aboutPage = {
   eyebrow: "About",
   title: "Nine-Ten Development Foundation.",
   support:
-    "910DF works with rural communities in Abuja, Kaduna, Nasarawa, and Niger States to improve water, hygiene, energy, education, and nutrition for women and children.",
+    "910DF works with rural communities in Abuja, Kaduna, Nasarawa, and Niger States through WHEE: Water, Health and hygiene, Energy, and Education.",
 };
 
 export const aboutMission = {
   title: "Mission",
-  body: "910DF improves access to clean water, nutrition, and menstrual hygiene, and strengthens community resilience through sustainable energy and foundational education.",
+  body: "To improve the health, learning, and daily living conditions of women, children, and indigent families in rural communities across Abuja, Kaduna, Nasarawa, and Niger States.",
   whoTitle: "Who we serve",
   whoIntro: "Programmes focus on:",
   who: [
@@ -15,30 +15,63 @@ export const aboutMission = {
     "Children under five",
     "Primary school pupils",
     "Secondary school girls",
+    "Indigent families in the operating states",
   ],
+};
+
+export type AboutTheoryLine = {
+  name: string;
+  detail: string;
+};
+
+export type AboutTheoryPillar = {
+  label: string;
+  body?: string;
+  /** Optional stacked lines (used for WHEE response) */
+  lines?: AboutTheoryLine[];
 };
 
 export const aboutTheory = {
   title: "Theory of change",
   intro:
-    "Shortages in water, power, nutrition, and schooling reinforce one another. 910DF addresses them together.",
+    "Shortages in water, health and hygiene, power, and schooling reinforce one another. 910DF addresses them together through WHEE.",
   pillars: [
     {
       label: "Problem",
-      body: "Rural communities face chronic water scarcity, lack of electricity, severe under-nutrition among under-fives, high school dropout linked to period poverty among girls, and under-resourced public primary schools.",
+      body: "Rural communities face chronic water scarcity, lack of electricity, under-nutrition and NOMA risk among children, high school dropout linked to period poverty among girls, and under-resourced public primary schools.",
     },
     {
       label: "Response",
-      body: "Integrated programmes: clean water infrastructure, 1.5–3 kVA solar battery systems, school libraries and low-bandwidth internet, tuition sponsorship for up to 50 pupils a year, menstrual hygiene support, and nutrition support for malnourished under-fives.",
+      body: "Four programmes under WHEE:",
+      lines: [
+        {
+          name: "Water",
+          detail: "Clean water access and community WASH committees.",
+        },
+        {
+          name: "Health and hygiene",
+          detail:
+            "Menstrual hygiene support, and nutrition work including for children affected by NOMA.",
+        },
+        {
+          name: "Energy",
+          detail:
+            "Clean solar energy systems for community hubs, health centres, and rural household clusters.",
+        },
+        {
+          name: "Education",
+          detail: "School support and tuition sponsorship for pupils who need it.",
+        },
+      ],
     },
     {
       label: "Long-term aim",
       body: "Improved community health, more equitable education, and stronger local livelihoods where basic services are reliable.",
     },
-  ],
+  ] satisfies AboutTheoryPillar[],
 };
 
 export const aboutCommunity = {
   title: "Working with communities",
-  body: "910DF plans with traditional rulers, local leaders, and women’s groups. Local WASH committees and school boards operate and maintain assets under ongoing 910DF oversight.",
+  body: "910DF plans with traditional rulers, local leaders, and women’s groups. Local WASH (Water, Sanitation, and Hygiene) committees and school boards operate and maintain assets under ongoing 910DF oversight.",
 };

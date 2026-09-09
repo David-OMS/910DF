@@ -2,9 +2,146 @@
 
 ---
 
-## 2026-09-06: WHO-tone copy pass + Impact
+## 2026-09-09: Slice 8 — Contact
 
 **Status:** In review.
+
+### What landed
+
+- `/contact` with enquiry form: name, email, phone (optional), subject (General / Donate / Volunteer / Partner / Programs), message
+- No “Other” options; email delivery still blocked on client inbox
+- Client-pass checklist slices 1–8 complete
+
+---
+
+## 2026-09-09: Slice 7 — Partner
+
+**Status:** Accepted (interest multi-select; Other removed).
+
+### What landed
+
+- Partner: proverb quote, short write-up, form (org name, area of interest, resources, location, contact name/email/phone)
+- Volunteer field label fixed to “Additional information”
+- Strip/footer Partner → `#partner`
+- Checklist slice 7 ticked
+
+### Next
+
+Slice 8: Contact form
+
+---
+
+## 2026-09-09: Slice 6 — Volunteer + Get involved landing
+
+**Status:** Accepted (label fix + moved on).
+
+### What landed
+
+- Get involved nav stays on `/get-involved` (page top): hero + Donate / Volunteer / Partner jump links — does not auto-open Donate
+- Volunteer: Info / Help / Resources select + form (name, email, phone, state, note)
+- Action strip / footer Volunteer → `#volunteer`
+- Form UI only for now; email delivery still blocked on client inbox
+
+---
+
+## 2026-09-09: Slice 5 — Donate
+
+**Status:** Accepted (moved on).
+
+### What landed
+
+- `/get-involved` with Donate section: short write-up, WHEE pillar select, payment reference (`910DF-W` / `H` / `EN` / `ED`), bank placeholders
+- Action strip + footer Donate → `/get-involved#donate`
+- Checklist slice 5 ticked
+
+### Notes
+
+- Real bank details still blocked on client
+- Volunteer / Partner sections next
+
+---
+
+## 2026-09-09: Slice 4 — About align (WHEE)
+
+**Status:** Accepted (mission rewritten; moved on).
+
+### What landed
+
+- About hero, mission, who we serve, and ToC response aligned to four WHEE pillars
+- Indigent families added to who list; WASH spelled out; RUTF spelled once in ToC response
+- NOMA named under problem/response without making the whole mission NOMA-only
+- Checklist slice 4 ticked
+
+### Next
+
+Slice 5: Get involved — Donate
+
+---
+
+## 2026-09-09: Slice 3 — Impact (WHEE)
+
+**Status:** Accepted (moved on).
+
+### What landed
+
+- Results framework renamed to four WHEE pillars: Water, Health and hygiene, Energy, Education
+- Water outputs mention boreholes; Energy uses petrol and firewood; method uses Google tools
+- Health outputs: MUAC, superfoods (RUTF, Ready-to-Use Therapeutic Food), NOMA support / further growth
+- Checklist slice 3 ticked
+
+---
+
+## 2026-09-09: Slice 2 — Programs (four WHEE)
+
+**Status:** Accepted (left as-is; Water depth limited by source).
+
+### What landed
+
+- `/programs` rebuilt as four modules: Water, Health and hygiene, Energy, Education
+- Hashes match home cards: `#water`, `#health-hygiene`, `#energy`, `#education`
+- Health: menstrual hygiene separate from nutrition / NOMA / superfoods (RUTF, Ready-to-Use Therapeutic Food)
+- Education: school support + tuition in one module
+- How we work strip kept; WASH spelled out in capacity-building step
+- Checklist slice 2 ticked
+
+---
+
+## 2026-09-09: Slice 1 — Home story (WHEE)
+
+**Status:** Accepted (moved on).
+
+### What landed
+
+- Hero support names WHEE (Water; Health and hygiene; Energy; Education) plus indigent families / primary and secondary pupils
+- Problem condensed to one block (client core + one short compounding line)
+- Four WHEE cards: Water, Health and hygiene, Energy, Education → `/programs#…` (2×2 grid)
+- Checklist slice 1 ticked in `docs/client-pass-checklist.md`
+
+### Notes
+
+- Programs page still six modules until slice 2; Learn more hashes for health-hygiene / education will 404 or miss until then
+- Card images reuse existing assets (health → nutrition.jpg; education → school-support.jpg)
+
+---
+
+## 2026-09-09: Client pass documented
+
+**Status:** Checklist ready; build not started.
+
+### What landed
+
+- Client meeting decisions locked in `docs/client-pass-checklist.md` (tickable slices 1–8)
+- `docs/site-ia.md` revised to four-pillar WHEE (H = Health and hygiene), Get involved / Contact / Impact rules
+
+### Next
+
+Slice 1 when approved: home hero + condensed problem + four cards
+
+---
+
+## 2026-09-06: WHO-tone copy pass + Impact
+
+**Status:** Superseded by client pass (structure changing to four WHEE pillars).
 
 ### What landed
 

@@ -1,23 +1,34 @@
 # 910DF: Public Site Information Architecture (locked)
 
-Source: NGO Business & Operational Blueprint. This file is the public site map only. Internal ops (CAC, SCUML, risk SOPs, procurement checklists, dual-sign-off policy, full fundraising calendar) stay off the site.
+Source: NGO Business & Operational Blueprint, revised by client meeting 2026-09-08. This file is the public site map only. Internal ops (CAC, SCUML, risk SOPs, procurement checklists, dual-sign-off policy, full fundraising calendar) stay off the site.
 
-Accent / colour / type are locked in `docs/design-system.md`. Logo mark and real contact details remain deferred.
+Accent / colour / type are locked in `docs/design-system.md`. Logo mark and real contact / bank details remain deferred until supplied.
+
+Build order and tick list: `docs/client-pass-checklist.md`.
 
 ---
 
 ## Site purpose
 
-Public face of The Nine-Ten Development Foundation (910DF): make mission, geography, WHEE model, six programs, and paths to donate / volunteer / partner clear and credible. Tone matches a serious development NGO, not a pasted operations manual and not invented impact theatre.
+Public face of The Nine-Ten Development Foundation (910DF): make mission, geography, WHEE work, four programme pillars, and paths to donate / volunteer / partner clear and credible. Tone matches a serious development NGO, not a pasted operations manual and not invented impact theatre.
 
-## Org thesis (from blueprint)
+## Org thesis
 
 - **Name:** The Nine-Ten Development Foundation (910DF)
 - **Where:** Abuja, Kaduna, Nasarawa, Niger (Nigeria)
-- **Model:** Integrated WHEE, Water, Hygiene, Energy, Education
-- **Who served:** Women, children under five, primary school pupils, secondary school girls
-- **Problem:** Multi-dimensional rural poverty, water scarcity, lack of electricity, under-5 under-nutrition, school dropout (especially girls / period poverty), under-resourced primary schools
-- **Long-term aim:** Healthier, more resilient communities; gender-equitable education; stronger local economic opportunity
+- **WHEE:** Water; Health and hygiene; Energy; Education (prefer “through WHEE”, not “WHEE model”, unless client revises)
+- **Who served:** Women, children under five, primary and secondary school pupils, indigent families
+- **Problem:** Multi-dimensional rural poverty (condensed on Home; detail on Programs)
+- **Long-term aim:** Healthier, more resilient communities; more equitable education; stronger local livelihoods where basic services hold
+
+### Four pillars (public)
+
+1. **Water** — solar-powered boreholes; community WASH
+2. **Health and hygiene** — menstrual hygiene; nutrition; NOMA; superfoods (RUTF / Ready-to-Use Therapeutic Food)
+3. **Energy** — 1.5–3 kVA solar BESS at hubs, health points, household clusters
+4. **Education** — primary school support (libraries, curriculum books, low-bandwidth solar internet) **and** tuition sponsorship (up to 50 pupils/year; merit selection with teachers and elders)
+
+---
 
 ## Stage on the site
 
@@ -25,13 +36,9 @@ Do **not** lead with “just founded” or apologise for being new. Honesty mean
 
 - No fake “children served” counters, donation thermometers, or invented case studies
 - Impact presents the measurement framework and what will be reported, not trophy stats
-- Get Involved can speak to seed support, volunteers, and CSR without a vulnerability banner
+- No scaffold copy (“until details are published”, “see the Impact page for how we’ll…”)
 
-A single calm line in About is enough if stage needs wording at all. The blueprint’s early stage shapes what we *omit* and *refuse to invent*, not the hero headline.
-
-## Pilot (for later copy if needed; not a homepage apology)
-
-Blueprint first public pilot: low-cost, high-visibility, sanitary pad distribution and a mini-library in one primary school. Use when building real Field Notebook / pilot content; not required as a permanent “we’re small” notice.
+---
 
 ## Year-1 giving frame (from blueprint)
 
@@ -45,13 +52,10 @@ Public/individual donations go 100% to programs in Year 1; founder/board contrib
 
 | Section | Content |
 |---|---|
-| Hero | Brand-forward headline; one supporting line (mission + geography + WHEE); primary CTAs: Donate, Volunteer |
-| Action strip | Donate · Volunteer · Partner (no vanity impact numbers) |
-| Problem | Short, specific problem from the blueprint |
-| Approach | WHEE in plain language, integrated, not siloed handouts |
-| Programs preview | Six pillars → link to Programs |
-| Where we work | Abuja, Kaduna, Nasarawa, Niger |
-| Get involved teaser | Give / volunteer / partner |
+| Hero | Brand-forward headline; support names WHEE with expansions + geography + indigent families / primary & secondary pupils |
+| Action strip | Donate · Volunteer · Partner → Get involved sections |
+| Problem | One condensed block (client-approved core); no long problem essay |
+| What we do | **Four** WHEE cards → `/programs#…` |
 | Footer | Legal name, nav, inquiry path |
 
 ### 2. About
@@ -59,47 +63,47 @@ Public/individual donations go 100% to programs in Year 1; founder/board contrib
 | Include | Exclude |
 |---|---|
 | Mission; who we serve | CAC / FIRS / SCUML how-tos |
-| Theory of Change in public language | Full risk matrix; financial dual-sign-off detail |
-| Lean governance at a glance | Staff JDs; full volunteer legal agreement |
-| Community-first delivery (leaders, local ownership) | Security SOP |
-| Optional one calm stage line | Internal 90-day task checklist as a page |
+| Theory of Change in public language (aligned to four WHEE pillars) | Full risk matrix; financial dual-sign-off detail |
+| Working with communities | Empty governance org chart until named trustees exist |
+| | Staff JDs; security SOP; stage apology lines |
 
-No fabricated founding anecdote, document has none. About uses mission / ToC, not fiction.
+No fabricated founding anecdote.
 
 ### 3. Programs
 
-One page, six modules (same shape each: who · what · why it sits in WHEE):
+One page, **four** modules (who · what · why it matters):
 
-1. Clean water & sanitation, solar-powered boreholes; community WASH committees
-2. Clean energy, 1.5-3kVA solar BESS at hubs, health points, household clusters
-3. Primary school support, mini-libraries, curriculum books, low-bandwidth solar-powered internet
-4. Tuition sponsorship, up to 50 pupils/year; merit selection with teachers and community elders
-5. Menstrual hygiene, Dignity Spaces; quarterly pads; menstrual health education
-6. Nutrition, PHC screening (MUAC); therapeutic/fortified foods for malnourished under-5s
+1. Water  
+2. Health and hygiene (incl. NOMA; superfoods (RUTF))  
+3. Energy  
+4. Education (school support + tuition)
 
-Optional short “How we work” strip: community entry → procurement → capacity building → monitoring & handover. Not a full PMO manual.
+Optional short How we work strip: community entry → procurement → capacity building → monitoring & handover.
 
 ### 4. Impact
 
-- KPI themes per pillar (litres, water points, MWh, kits, MUAC recoveries, attendance, qualitative notes)
-- Method in brief: baseline before entry; mobile data (e.g. Kobo/ODK); quarterly public updates
+- Results framework = **four WHEE pillars**
+- Water outputs mention boreholes where relevant
+- Energy pathway: petrol and firewood (not kerosene/diesel)
+- Method: baseline before entry; tools such as Google; quarterly public updates
+- Health: MUAC; superfoods (RUTF); NOMA context
 - No invented achievement dashboards
 
 ### 5. Get involved
 
-- **Donate:** seed / Sponsor a Scholar direction; Year-1 100% model; Field Notebook transparency; CSR-shaped pillar sponsorship language
-- **Volunteer:** local corps in operating states; what volunteers actually support; child protection / conduct mentioned lightly
-- **Partner:** corporate ESG alignment; institutional funding after verified pilot (discipline, not weakness)
-- Payment rails: honest “how to give” until Paystack/Flutterwave (or equivalent) is live, no fake checkout
+- **Donate:** short write-up; select W / H / Energy / Education; one bank account + payment reference code to tag pillar; placeholders until bank details supplied
+- **Volunteer:** short write-up; Info / Help / Resources; then form → email
+- **Partner:** quote (*If you want to go fast, go alone. If you want to go far, go together.*); short write-up; form (organisation name, area of interest, resources available, location, contact name/email/phone)
+- No fake checkout / payment API unless requested later
 
 ### 6. Contact
 
-Inquiry paths: donate · volunteer · partnership · general. Geography. Real phone / email / address only when supplied, omit or clearly mark placeholders; never invent.
+Enquiry form → email when inbox supplied. Typical fields: name, email, phone (optional), subject/type, message. Never invent contact details.
 
 ---
 
 ## Out of v1 public IA
 
-Blog, Gallery, Events, live M&E graphs, donor login, multilingual, logo/accent/contact finalisation (deferred by decision).
+Blog, Gallery, Events, live M&E graphs, donor login, multilingual, logo finalisation (deferred).
 
 Ops-only (never menu items): registration checklists, board recruiting brief, risk matrix, procurement rules, internal fundraising calendar, dual-signature policy amounts, full M&E instrument design.

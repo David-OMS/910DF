@@ -35,7 +35,7 @@ function ProgrammeMedia({ item }: { item: ProgrammeCard }) {
           src={item.imageSrc}
           alt={item.imageAlt}
           fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
           className="object-cover object-center grayscale"
         />
       </div>
@@ -60,7 +60,7 @@ export function HomeSituation() {
   return (
     <section className="section-backdrop-subtle" aria-label="Situation and work">
       <div className="section-site">
-        <div className="container-site max-w-3xl space-y-6 md:space-y-7">
+        <div className="container-site max-w-3xl">
           {paragraphs.map((parts, index) => (
             <SituationParagraph key={index} parts={parts} />
           ))}
@@ -69,14 +69,16 @@ export function HomeSituation() {
 
       <div className="border-t border-line bg-white/50">
         <div className="section-site container-site">
-          <ScrollReveal
-            as="h2"
-            className="font-display text-3xl text-ink md:text-4xl"
-          >
-            {work.title}
+          <ScrollReveal as="div" className="max-w-3xl">
+            <h2 className="font-display text-3xl text-ink md:text-4xl">
+              {work.title}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted md:text-lg">
+              {work.intro}
+            </p>
           </ScrollReveal>
 
-          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+          <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:gap-6">
             {work.items.map((item) => (
               <ScrollReveal key={item.id} as="li" className="h-full">
                 <article className="flex h-full flex-col overflow-hidden border border-line bg-white">

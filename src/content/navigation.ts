@@ -26,8 +26,8 @@ export const footerContent = {
   exploreLabel: "Explore",
   involveLabel: "Get involved",
   involveLinks: [
-    { href: "/get-involved", label: "Donate" },
-    { href: "/get-involved", label: "Volunteer" },
-    { href: "/get-involved", label: "Partner" },
+    { href: "/get-involved#donate", label: "Donate" },
+    { href: "/get-involved#volunteer", label: "Volunteer" },
+    { href: "/get-involved#partner", label: "Partner" },
   ],
 };
