@@ -2,7 +2,7 @@ export const aboutPage = {
   eyebrow: "About",
   title: "Nine-Ten Development Foundation.",
   support:
-    "910DF works with rural communities in Abuja, Kaduna, Nasarawa, and Niger States through WHEE: Water, Health and hygiene, Energy, and Education.",
+    "910DF works with rural communities in Abuja, Kaduna, Nasarawa, and Niger States for women, children, and indigent families.",
 };
 
 export const aboutMission = {
@@ -34,7 +34,7 @@ export type AboutTheoryPillar = {
 export const aboutTheory = {
   title: "Theory of change",
   intro:
-    "Shortages in water, health and hygiene, power, and schooling reinforce one another. 910DF addresses them together through WHEE.",
+    "Shortages in water, health and hygiene, power, and schooling reinforce one another. 910DF addresses them together.",
   pillars: [
     {
       label: "Problem",
@@ -42,7 +42,6 @@ export const aboutTheory = {
     },
     {
       label: "Response",
-      body: "Four programmes under WHEE:",
       lines: [
         {
           name: "Water",

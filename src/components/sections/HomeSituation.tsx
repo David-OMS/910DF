@@ -69,13 +69,11 @@ export function HomeSituation() {
 
       <div className="border-t border-line bg-white/50">
         <div className="section-site container-site">
-          <ScrollReveal as="div" className="max-w-3xl">
-            <h2 className="font-display text-3xl text-ink md:text-4xl">
-              {work.title}
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted md:text-lg">
-              {work.intro}
-            </p>
+          <ScrollReveal
+            as="h2"
+            className="font-display text-3xl text-ink md:text-4xl"
+          >
+            {work.title}
           </ScrollReveal>
 
           <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:gap-6">

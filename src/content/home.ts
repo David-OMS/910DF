@@ -81,8 +81,6 @@ export const homeSituation = {
   ] as TextPart[][],
   work: {
     title: "What Nine-Ten is doing",
-    intro:
-      "Work is organised as WHEE: Water, Health and hygiene, Energy, and Education.",
     items: [
       {
         id: "water",

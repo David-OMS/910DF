@@ -13,7 +13,7 @@ export const programsPage = {
   eyebrow: "Programs",
   title: "Programmes.",
   support:
-    "Four programmes under WHEE in rural communities across Abuja, Kaduna, Nasarawa, and Niger States: Water, Health and hygiene, Energy, and Education.",
+    "Programmes in rural communities across Abuja, Kaduna, Nasarawa, and Niger States.",
   modulesLabel: "Programmes",
   fieldLabels: {
     who: "Who it serves",

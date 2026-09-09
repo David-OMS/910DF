@@ -110,7 +110,7 @@ export const partnerContent = {
   form: {
     orgNameLabel: "Organisation name",
     interestLabel: "Area of interest",
-    interestHelp: "Select one or more WHEE pillars.",
+    interestHelp: "Select one or more programmes.",
     interestOptions: [
       "Water",
       "Health and hygiene",

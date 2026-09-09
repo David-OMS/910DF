@@ -2,7 +2,7 @@ export const impactPage = {
   eyebrow: "Impact",
   title: "Measurement and results.",
   support:
-    "910DF tracks outputs and outcomes across WHEE: Water, Health and hygiene, Energy, and Education.",
+    "910DF tracks programme outputs and outcomes across Water, Health and hygiene, Energy, and Education.",
 };
 
 export const impactMethod = {
@@ -12,7 +12,7 @@ export const impactMethod = {
 
 export const impactFramework = {
   title: "Results framework",
-  intro: "Each WHEE pillar has defined outputs and outcomes.",
+  intro: "Each pillar has defined outputs and outcomes.",
   pathways: [
     {
       pillar: "Water",
