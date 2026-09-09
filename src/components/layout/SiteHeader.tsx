@@ -1,10 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
 
-import { mainNav, siteName } from "@/content/navigation";
+import { brandLogos, mainNav, siteName } from "@/content/navigation";
 
 function linkIsActive(pathname: string, href: string): boolean {
   if (href === "/") {
@@ -56,11 +57,20 @@ export function SiteHeader() {
       }`}
     >
       <div className="container-site flex h-16 items-center justify-between gap-4 md:h-20">
-        <Link
-          href="/"
-          className={`font-sans text-lg font-semibold tracking-[0.18em] uppercase ${textClass}`}
-        >
-          {siteName}
+        <Link href="/" className="inline-flex items-center gap-3" aria-label={siteName}>
+          <Image
+            src={isSolid ? brandLogos.onLight : brandLogos.onDark}
+            alt=""
+            width={56}
+            height={56}
+            className="h-11 w-11 object-contain md:h-12 md:w-12"
+            priority
+          />
+          <span
+            className={`font-sans text-base font-semibold tracking-[0.12em] uppercase md:text-lg ${textClass}`}
+          >
+            {siteName}
+          </span>
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">

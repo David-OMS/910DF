@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import {
+  brandLogos,
   footerContent,
   mainNav,
   siteName,
@@ -16,9 +18,22 @@ export function SiteFooter() {
       <div className="container-site py-10 md:py-12">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           <div>
-            <p className="font-sans text-base font-semibold uppercase tracking-[0.18em]">
-              {siteName}
-            </p>
+            <Link
+              href="/"
+              className="inline-flex items-center gap-3"
+              aria-label={siteName}
+            >
+              <Image
+                src={brandLogos.onDark}
+                alt=""
+                width={48}
+                height={48}
+                className="h-10 w-10 object-contain"
+              />
+              <span className="font-sans text-base font-semibold uppercase tracking-[0.12em]">
+                {siteName}
+              </span>
+            </Link>
             <p className="mt-2 text-sm text-white/70">{siteNameLong}</p>
             <p className="mt-3 text-sm leading-snug text-white/60">
               {footerContent.blurb}

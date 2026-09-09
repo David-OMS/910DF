@@ -317,6 +317,22 @@ Get involved page (nav + strip currently 404), then Programs page for Learn more
 
 ---
 
+## 2026-09-09: Navbar + footer logo
+
+**Status:** In review.
+
+### What landed
+
+- Transparent cropped marks in `public/images/brand/` (`mark-on-light.png`, `mark-on-dark.png`) — no baked plates
+- Header: icon + `910DF` wordmark; light/dark mark by overlay vs solid
+- Footer: same icon + wordmark lockup (`mark-on-dark` on black), links home
+
+### Notes
+
+- Old lockup PNGs kept on disk but unused in chrome for now
+
+---
+
 ## 2026-09-05: Block 1: Navbar
 
 **Status:** Accepted.

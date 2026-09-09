@@ -9,6 +9,15 @@ export const siteName = "910DF";
 
 export const siteNameLong = "Nine-Ten Development Foundation";
 
+export const brandLogos = {
+  /** Black + gold icon for light header */
+  onLight: "/images/brand/mark-on-light.png",
+  /** White + gold icon for dark / transparent header */
+  onDark: "/images/brand/mark-on-dark.png",
+  lockup: "/images/brand/logo-lockup.png",
+  icon: "/images/brand/logo-icon.png",
+} as const;
+
 export const mainNav: NavItem[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
