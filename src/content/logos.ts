@@ -1,4 +1,4 @@
-export const LOGO_STORAGE_KEY = "910df-logo-id";
+export const LOGO_STORAGE_KEY = "910df-logo-id-v2";
 
 export type LogoVariant = "mark" | "lockup";
 
@@ -49,7 +49,8 @@ export const LOGO_OPTIONS: LogoOption[] = [
   },
 ];
 
-export const DEFAULT_LOGO_ID = "current";
+/** Production default: Canva gold seal (not the old mark-only lockup). */
+export const DEFAULT_LOGO_ID = "logo3";
 
 export function getLogoById(id: string): LogoOption | undefined {
   return LOGO_OPTIONS.find((logo) => logo.id === id);
