@@ -30,6 +30,9 @@
   --motion-hero-media: 1.8s;
   --motion-hero-copy: 0.9s;
   --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Live header height — SiteHeader updates this for masthead / condensed */
+  --site-header-h: 5rem;
 }
 
 @theme inline {

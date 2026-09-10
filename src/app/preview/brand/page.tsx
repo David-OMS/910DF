@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { BrandPreviewPanel } from "@/components/preview/BrandPreviewPanel";
 
 export const metadata: Metadata = {
-  title: "Wordmark preview | 910DF",
+  title: "Logo preview | 910DF",
   robots: {
     index: false,
     follow: false,

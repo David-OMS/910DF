@@ -2,6 +2,24 @@
 
 ---
 
+## 2026-09-10: Logo masthead → condensed nav
+
+**Status:** In review.
+
+### What landed
+
+- Regenerated **eight** assets (4 seals + 4 compact `910DF` lockups)
+- Option 1: charcoal fill + thin white frame **tight to image edges** (no floating mid-canvas box)
+- Vertical: interlocking 910 + **DEVELOPMENT FOUNDATION** (white)
+- Scroll: single **910DF** image per colourway — not 910 + separate DF text
+- Colourways: all-white / cream+terracotta / white+gold / white+teal
+- Frame-overlap seal attempt reverted — back to edge-tight frame with 910 inside
+- Footer seal sized up + slightly more footer padding so the mark reads
+- Masthead seals swapped to **Canva gold master** (+ recolored white / terracotta / teal)
+
+---
+
+
 ## 2026-09-09: Get involved tabs
 
 **Status:** In review.

@@ -8,7 +8,10 @@ type PageHeroProps = {
 export function PageHero({ eyebrow, title, support }: PageHeroProps) {
   return (
     <header className="border-b border-line bg-surface">
-      <div className="container-site section-site pt-28 md:pt-32">
+      <div
+        className="container-site section-site"
+        style={{ paddingTop: "calc(var(--site-header-h) + 2.5rem)" }}
+      >
         <p className="text-sm font-medium uppercase tracking-[0.2em] text-accent">
           {eyebrow}
         </p>

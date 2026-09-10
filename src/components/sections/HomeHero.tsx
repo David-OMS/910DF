@@ -20,7 +20,10 @@ export function HomeHero() {
       />
       <div className="absolute inset-0 hero-scrim" aria-hidden="true" />
 
-      <div className="relative z-10 w-full px-5 pb-40 pt-28 md:px-8 md:pb-48">
+      <div
+        className="relative z-10 w-full px-5 pb-40 md:px-8 md:pb-48"
+        style={{ paddingTop: "calc(var(--site-header-h) + 1.5rem)" }}
+      >
         <div className="container-site">
           <p className="hero-copy-in hero-copy-delay-1 text-sm font-medium uppercase tracking-[0.2em] text-accent">
             {homeHeroCopy.eyebrow}

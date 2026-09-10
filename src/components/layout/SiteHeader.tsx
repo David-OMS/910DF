@@ -1,11 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
 
-import { brandLogos, mainNav, siteName } from "@/content/navigation";
+import { isLogoSealId } from "@/components/brand/LogoSeal";
+import { BrandLogo } from "@/components/layout/BrandLogo";
+import { useLogo } from "@/components/providers/LogoProvider";
+import { mainNav, siteName } from "@/content/navigation";
 
 function linkIsActive(pathname: string, href: string): boolean {
   if (href === "/") {
@@ -16,11 +18,15 @@ function linkIsActive(pathname: string, href: string): boolean {
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const { logo } = useLogo();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuId = useId();
 
-  // Home keeps the transparent bar until scroll; other routes stay solid.
+  const isSeal = isLogoSealId(logo.id);
+  // Seal logos: full masthead at top of page, condensed bar after scroll.
+  const isMasthead = isSeal && !isScrolled;
+  // Home keeps transparent chrome until scroll; other routes stay solid.
   const isOverlay = pathname === "/" && !isScrolled;
   const isSolid = !isOverlay;
 
@@ -45,32 +51,48 @@ export function SiteHeader() {
     };
   }, [isMenuOpen]);
 
+  // Let page heroes pad for the live header height.
+  useEffect(() => {
+    const root = document.documentElement;
+    if (isMasthead) {
+      root.style.setProperty("--site-header-h", "8rem");
+    } else if (isSeal) {
+      root.style.setProperty("--site-header-h", "5rem");
+    } else {
+      root.style.setProperty("--site-header-h", "5rem");
+    }
+    return () => {
+      root.style.removeProperty("--site-header-h");
+    };
+  }, [isMasthead, isSeal]);
+
   const textClass = isSolid ? "text-ink" : "text-white text-on-hero";
   const mutedTextClass = isSolid
     ? "text-ink/80 hover:text-ink"
     : "text-white/90 hover:text-white text-on-hero";
 
+  const barHeight = isMasthead
+    ? "h-28 md:h-32"
+    : isSeal
+      ? "h-16 md:h-20"
+      : "h-16 md:h-20";
+
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,height] duration-300 ${
         isSolid ? "border-b border-line bg-white/95 backdrop-blur-sm" : "bg-transparent"
       }`}
     >
-      <div className="container-site flex h-16 items-center justify-between gap-4 md:h-20">
-        <Link href="/" className="inline-flex items-center gap-3" aria-label={siteName}>
-          <Image
-            src={isSolid ? brandLogos.onLight : brandLogos.onDark}
-            alt=""
-            width={56}
-            height={56}
-            className="h-11 w-11 object-contain md:h-12 md:w-12"
+      <div
+        className={`container-site flex items-center justify-between gap-4 transition-[height] duration-300 ${barHeight}`}
+      >
+        <Link href="/" className="inline-flex items-center" aria-label={siteName}>
+          <BrandLogo
+            surface={isSolid ? "light" : "dark"}
+            size={isMasthead ? "masthead" : isSeal ? "compact" : "header"}
             priority
+            wordmarkClassName={textClass}
           />
-          <span
-            className={`font-sans text-base font-semibold tracking-[0.12em] uppercase md:text-lg ${textClass}`}
-          >
-            {siteName}
-          </span>
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
