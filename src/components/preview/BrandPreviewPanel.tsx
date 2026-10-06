@@ -3,9 +3,10 @@
 import Image from "next/image";
 
 import { SEAL_ASSETS, isLogoSealId } from "@/components/brand/LogoSeal";
+import { SerifSealTrial } from "@/components/brand/SerifSealTrial";
 import { BrandLogo } from "@/components/layout/BrandLogo";
 import { useLogo } from "@/components/providers/LogoProvider";
-import { LOGO_OPTIONS } from "@/content/logos";
+import { LOGO_OPTIONS, SERIF_TRIAL_ID } from "@/content/logos";
 
 export function BrandPreviewPanel() {
   const { logoId, setLogoId, resetLogo } = useLogo();
@@ -69,14 +70,18 @@ export function BrandPreviewPanel() {
               }`}
             >
               <div className="relative flex h-48 items-center justify-center bg-[#1a1a1a]">
-                <Image
-                  src={thumb}
-                  alt=""
-                  width={140}
-                  height={180}
-                  className="h-44 w-auto object-contain"
-                  unoptimized
-                />
+                {item.id === SERIF_TRIAL_ID ? (
+                  <SerifSealTrial mode="css" numeralOpacity={1} size="masthead" />
+                ) : (
+                  <Image
+                    src={thumb}
+                    alt=""
+                    width={140}
+                    height={180}
+                    className="h-44 w-auto object-contain"
+                    unoptimized
+                  />
+                )}
               </div>
               <p className="mt-2 text-sm font-medium text-ink">{item.label}</p>
             </button>

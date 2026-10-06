@@ -1,4 +1,4 @@
-export type LogoSealId = "logo1" | "logo2" | "logo3" | "logo4";
+export type LogoSealId = "logo1" | "logo2" | "logo3" | "logo4" | "logo5";
 export type LogoSurface = "dark" | "light";
 
 /** Authored seal PNGs: edge-tight frame; compact = full 910DF lockup. */
@@ -26,8 +26,19 @@ export const SEAL_ASSETS: Record<
     masthead: "/images/brand/seal-teal.png?v=7",
     compact: "/images/brand/compact-teal.png?v=7",
   },
+  logo5: {
+    label: "Seal — Stoerh Canva trial",
+    masthead: "/images/brand/seal-stoerh.png?v=18",
+    compact: "/images/brand/compact-stoerh.png?v=16",
+  },
 };
 
 export function isLogoSealId(id: string): id is LogoSealId {
-  return id === "logo1" || id === "logo2" || id === "logo3" || id === "logo4";
+  return (
+    id === "logo1" ||
+    id === "logo2" ||
+    id === "logo3" ||
+    id === "logo4" ||
+    id === "logo5"
+  );
 }

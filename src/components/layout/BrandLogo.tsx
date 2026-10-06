@@ -3,7 +3,9 @@
 import Image from "next/image";
 
 import { SEAL_ASSETS, isLogoSealId } from "@/components/brand/LogoSeal";
+import { SerifSealTrial } from "@/components/brand/SerifSealTrial";
 import { useLogo } from "@/components/providers/LogoProvider";
+import { SERIF_TRIAL_ID } from "@/content/logos";
 import { siteName } from "@/content/navigation";
 
 type BrandLogoProps = {
@@ -16,6 +18,7 @@ type BrandLogoProps = {
 /**
  * Uses the real interlocking-910 PNGs.
  * Masthead = full seal; compact (after scroll) = 910DF bar.
+ * Local serif-trial uses live SVG/CSS (see /preview/serif-seal).
  */
 export function BrandLogo({
   surface,
@@ -24,6 +27,16 @@ export function BrandLogo({
   wordmarkClassName = "",
 }: BrandLogoProps) {
   const { logo } = useLogo();
+
+  if (logo.id === SERIF_TRIAL_ID) {
+    return (
+      <SerifSealTrial
+        mode="css"
+        numeralOpacity={1}
+        size={size === "header" ? "masthead" : size}
+      />
+    );
+  }
 
   if (isLogoSealId(logo.id)) {
     const assets = SEAL_ASSETS[logo.id];

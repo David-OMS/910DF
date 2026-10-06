@@ -2,6 +2,29 @@
 
 ---
 
+## 2026-09-24: Stoerh Canva seal on site (trial)
+
+**Status:** Local trial — default set to `logo5` to preview.
+
+### What landed
+- Canva export → `public/images/brand/seal-stoerh.png`
+- Rough scroll compact from top crop → `compact-stoerh.png`
+- Wired as seal `logo5`; `DEFAULT_LOGO_ID` + storage key `v3` so it shows without cache fights
+
+---
+
+## 2026-09-23: Serif seal trial (SVG vs CSS)
+
+**Status:** Local trial only — not production default.
+
+### What landed
+- Private `/preview/serif-seal`: one Didone-style seal, SVG plate vs CSS frosted plate
+- Newsreader `910` (SVG `textLength` edge snap) + Montserrat wordmark
+- Solid / translucent `910` toggle; “Use in site header” sets `serif-trial` (CSS build)
+- Production default remains gold PNG seal (`logo3`)
+
+---
+
 ## 2026-09-10: Logo masthead → condensed nav
 
 **Status:** In review.

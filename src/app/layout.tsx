@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Figtree, Newsreader } from "next/font/google";
+import { Figtree, Montserrat, Newsreader } from "next/font/google";
 
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
@@ -21,6 +21,13 @@ const newsreader = Newsreader({
   display: "swap",
 });
 
+/** Trial wordmark for serif-seal lab — not a production lock yet. */
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     default: "Nine-Ten Development Foundation",
@@ -38,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${figtree.variable} ${newsreader.variable} h-full antialiased`}
+      className={`${figtree.variable} ${newsreader.variable} ${montserrat.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans text-ink">
         <AccentProvider>

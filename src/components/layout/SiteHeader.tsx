@@ -4,9 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
 
-import { isLogoSealId } from "@/components/brand/LogoSeal";
 import { BrandLogo } from "@/components/layout/BrandLogo";
 import { useLogo } from "@/components/providers/LogoProvider";
+import { usesSealChrome } from "@/content/logos";
 import { mainNav, siteName } from "@/content/navigation";
 
 function linkIsActive(pathname: string, href: string): boolean {
@@ -23,7 +23,7 @@ export function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuId = useId();
 
-  const isSeal = isLogoSealId(logo.id);
+  const isSeal = usesSealChrome(logo.id);
   // Seal logos: full masthead at top of page, condensed bar after scroll.
   const isMasthead = isSeal && !isScrolled;
   // Home keeps transparent chrome until scroll; other routes stay solid.
