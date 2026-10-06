@@ -35,6 +35,10 @@ export const metadata: Metadata = {
   },
   description:
     "The Nine-Ten Development Foundation: integrated Water, Hygiene, Energy, and Education programmes across Abuja, Kaduna, Nasarawa, and Niger.",
+  icons: {
+    icon: [{ url: "/favicon.ico" }, { url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/apple-icon.png", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({
