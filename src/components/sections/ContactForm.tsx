@@ -4,16 +4,43 @@ import { FormEvent, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
 import { contactForm } from "@/content/contact";
+import { enquiryCopy } from "@/content/enquiry";
+import { submitEnquiry } from "@/lib/submit-enquiry";
 
 const fieldClass =
   "mt-2 w-full border border-line bg-white px-3 py-2.5 text-sm text-ink outline-none focus-visible:border-accent";
 
 export function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    setError(null);
+    setIsSending(true);
+
+    const form = event.currentTarget;
+    const data = new FormData(form);
+
+    const result = await submitEnquiry({
+      kind: "contact",
+      name: String(data.get("name") ?? ""),
+      email: String(data.get("email") ?? ""),
+      phone: String(data.get("phone") ?? "") || undefined,
+      subject: String(data.get("subject") ?? ""),
+      message: String(data.get("message") ?? ""),
+    });
+
+    setIsSending(false);
+
+    if (!result.ok) {
+      setError(enquiryCopy.errorMessage);
+      return;
+    }
+
     setIsSubmitted(true);
+    form.reset();
   }
 
   return (
@@ -117,12 +144,17 @@ export function ContactForm() {
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
-            <Button type="submit" variant="primary">
-              {contactForm.submitLabel}
+            <Button type="submit" variant="primary" disabled={isSending}>
+              {isSending ? enquiryCopy.sendingLabel : contactForm.submitLabel}
             </Button>
             {isSubmitted ? (
               <p className="text-sm text-ink" role="status">
                 {contactForm.successMessage}
+              </p>
+            ) : null}
+            {error ? (
+              <p className="text-sm text-ink" role="alert">
+                {error}
               </p>
             ) : null}
           </div>

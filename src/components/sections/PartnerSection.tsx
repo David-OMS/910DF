@@ -3,18 +3,23 @@
 import { FormEvent, useState } from "react";
 
 import { Button } from "@/components/ui/Button";
+import { enquiryCopy } from "@/content/enquiry";
 import { partnerContent } from "@/content/get-involved";
+import { submitEnquiry } from "@/lib/submit-enquiry";
 
 const fieldClass =
   "mt-2 w-full border border-line bg-white px-3 py-2.5 text-sm text-ink outline-none focus-visible:border-accent";
 
 export function PartnerSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [interests, setInterests] = useState<string[]>([]);
   const [interestError, setInterestError] = useState(false);
 
   function toggleInterest(option: string) {
     setInterestError(false);
+    setError(null);
     setInterests((current) =>
       current.includes(option)
         ? current.filter((item) => item !== option)
@@ -22,7 +27,7 @@ export function PartnerSection() {
     );
   }
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     if (interests.length === 0) {
@@ -30,7 +35,33 @@ export function PartnerSection() {
       return;
     }
 
+    setError(null);
+    setIsSending(true);
+
+    const form = event.currentTarget;
+    const data = new FormData(form);
+
+    const result = await submitEnquiry({
+      kind: "partner",
+      organisation: String(data.get("organisation") ?? ""),
+      interests,
+      resources: String(data.get("resources") ?? ""),
+      location: String(data.get("location") ?? ""),
+      contactName: String(data.get("contactName") ?? ""),
+      email: String(data.get("email") ?? ""),
+      phone: String(data.get("phone") ?? ""),
+    });
+
+    setIsSending(false);
+
+    if (!result.ok) {
+      setError(enquiryCopy.errorMessage);
+      return;
+    }
+
     setIsSubmitted(true);
+    setInterests([]);
+    form.reset();
   }
 
   return (
@@ -205,12 +236,19 @@ export function PartnerSection() {
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
-            <Button type="submit" variant="primary">
-              {partnerContent.form.submitLabel}
+            <Button type="submit" variant="primary" disabled={isSending}>
+              {isSending
+                ? enquiryCopy.sendingLabel
+                : partnerContent.form.submitLabel}
             </Button>
             {isSubmitted ? (
               <p className="text-sm text-ink" role="status">
                 {partnerContent.form.successMessage}
+              </p>
+            ) : null}
+            {error ? (
+              <p className="text-sm text-ink" role="alert">
+                {error}
               </p>
             ) : null}
           </div>

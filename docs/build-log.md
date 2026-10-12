@@ -2,6 +2,18 @@
 
 ---
 
+## 2026-10-12: Form → email (Resend)
+
+**Status:** Wired — needs Resend domain verified + env on Vercel/local.
+
+### What landed
+- `POST /api/enquire` validates Contact / Volunteer / Partner payloads and sends via Resend
+- To + From: `CONTACT_TO_EMAIL` / `CONTACT_FROM_EMAIL` (info@910df.org); Reply-To = submitter
+- Forms show sending / success / error; no fake “sent” without API ok
+- Env: `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL` (`.env.local` + Vercel)
+
+---
+
 ## 2026-09-24: Stoerh Canva seal on site (trial)
 
 **Status:** Local trial — default set to `logo5` to preview.

@@ -77,7 +77,7 @@ Locked tone: WHO-grade, present tense, no pitch, no scaffold/meta copy, no inven
 
 - [ ] Bank name / account number / account name  
 - [ ] Preferred donation reference format (confirm EN vs ED or similar)  
-- [ ] Email for Contact / Volunteer / Partner form submissions  
+- [x] Email for Contact / Volunteer / Partner form submissions (`info@910df.org` via Resend)  
 - [ ] Any preferred Partner write-up beyond the quote  
 
 ---
