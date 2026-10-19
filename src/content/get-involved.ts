@@ -41,9 +41,9 @@ export const donateContent = {
     "Include this exact reference on your transfer so the gift can be allocated to the pillar you chose.",
   bankLabel: "Bank details",
   bank: {
-    bankName: "To be confirmed",
-    accountName: "To be confirmed",
-    accountNumber: "To be confirmed",
+    bankName: "Zenith Bank",
+    accountName: "THE NINE-TEN DEVELOPMENT FOUNDATION",
+    accountNumber: "1313105790",
   },
   pillars: [
     {

@@ -75,7 +75,7 @@ Locked tone: WHO-grade, present tense, no pitch, no scaffold/meta copy, no inven
 
 ### Blocked on client (do not invent)
 
-- [ ] Bank name / account number / account name  
+- [x] Bank name / account number / account name (Zenith Bank · THE NINE-TEN DEVELOPMENT FOUNDATION · 1313105790)  
 - [ ] Preferred donation reference format (confirm EN vs ED or similar)  
 - [x] Email for Contact / Volunteer / Partner form submissions (`info@910df.org` via Resend)  
 - [ ] Any preferred Partner write-up beyond the quote  

@@ -2,6 +2,15 @@
 
 ---
 
+## 2026-10-19: Donate bank details
+
+**Status:** Accepted.
+
+### What landed
+- Zenith Bank · THE NINE-TEN DEVELOPMENT FOUNDATION · 1313105790 on Donate (`donateContent.bank`)
+
+---
+
 ## 2026-10-12: Form → email (Resend)
 
 **Status:** Wired — needs Resend domain verified + env on Vercel/local.
